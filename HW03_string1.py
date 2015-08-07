@@ -25,11 +25,11 @@
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
+# Display message based on count
 	if (count>=10):
 		return 'Number of donuts: many'
 	else:
-		return ('Number of donuts: '+str(count)+'\'')
-
+		return 'Number of donuts: '+str(count)
 
 # B. both_ends
 # Given a string s, return a string made of the first 2
@@ -37,8 +37,16 @@ def donuts(count):
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
 def both_ends(s):
-  # +++your code here+++
-  return
+#calculating string length to sift out strings less that 2 char
+	string_length=len(s)
+	if (string_length<2):
+		return ''
+	else:
+#extracting first and last two char of the string to concatenate and generate the required result
+		first_two=s[0:2]
+		last_two=s[-2:]
+		final=first_two+last_two
+		return final
 
 
 # C. fix_start
@@ -51,9 +59,12 @@ def both_ends(s):
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
-  # +++your code here+++
-  return
-
+	first_char=s[0:1]	#extracting first char
+#	print first_char
+	mod_string=s[1:]	#extracting string from first char onwards
+#	print mod_string
+	x=mod_string.replace(first_char,'*')	#replacing every char in string thats is same as first char with '*'
+	return first_char+x
 
 # D. MixUp
 # Given strings a and b, return a single string with a and b separated
@@ -63,9 +74,13 @@ def fix_start(s):
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
-  # +++your code here+++
-  return
-
+	first_string_two_char=a[:2] 	#extracting first 2 char of first string
+	first_string_remaining=a[2:]    #extracting rest of the string of first string
+	second_string_two_char=b[:2]    #extracting first 2 char of second string
+	second_string_remaining=b[2:]   #extracting rest of the string of second string
+#combining the parts to return desired o/p.
+	final=second_string_two_char+first_string_remaining+' '+first_string_two_char+second_string_remaining
+	return final
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.

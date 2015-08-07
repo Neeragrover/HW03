@@ -7,7 +7,8 @@
 # Exercise 1
 # When you submit only include your final function: compare
 def compare(x,y):
-	if (x>y):
+#comparing x and y to return 1 if x>y, 0 if they are equal and -1 if x<y
+	if (x>y):		
 #		print("1")
 		return 1
 	if (x==y):
@@ -23,10 +24,12 @@ def compare(x,y):
 # Do develop incrementally. Do not share here.
 
 def hypotenuse(side1, side2):
+#calculating square of sides
 	side1_square=(side1**2.0)
 	side2_square=(side2**2.0)
+#calculating hypotenuse by taking the sqrt of sum of squares if sides
 	hypotenuse=(side1_square+side2_square)**(1/2.0)
-	print hypotenuse
+#	print hypotenuse
 	return hypotenuse
 
 ################################################################################
@@ -34,6 +37,7 @@ def hypotenuse(side1, side2):
 # When you submit only include your final function: is_between
 
 def is_between(x,y,z):
+#comparing x, y and z to determine if y is between x and y
 	if (x<=y and y<=z):
 #		print "true"
 		return True
@@ -46,6 +50,7 @@ def is_between(x,y,z):
 # When you submit only include your final function: is_palindrome
 
 def is_palindrome(string):
+#reversing the string to compare with original string and determine if its a palindrome
 	reverse_string=string[::-1]
 	if (string==reverse_string):
 #		print "true"
@@ -58,6 +63,7 @@ def is_palindrome(string):
 # Exercise 7
 # When you submit only include your final function: is_power
 def is_power(a,b):
+#determining is_power based on definition
 	interim=a/b
 	if (a%b==0 and interim%b==0):
 #		print "true"
@@ -75,36 +81,35 @@ def is_power(a,b):
 
 ################################################################################
 def main():
-    """Your functions will be called within this function."""
-    ############################################################################
-    # Use this space temporarily to call functions in development:
-    print("Hello World!")
+#"""Your functions will be called within this function."""
+############################################################################
+# Use this space temporarily to call functions in development:
+	print("Hello World!")
     ############################################################################
     # Uncomment the below to test and before commiting:
     # # Exercise 1
-    #compare(1,1)
-    #compare(1,2)
-    #compare(2,1)
+    #print compare(1,1)
+    #print compare(1,2)
+    #print compare(2,1)
     # # Exercise 2
-    #hypotenuse(1,1)
-    #hypotenuse(3,4)
-    #hypotenuse(1.2,12)
-    #hypotenuse(3,4)
+    #print hypotenuse(1,1)
+    #print hypotenuse(3,4)
+    #print hypotenuse(1.2,12)
     # # Exercise 3
-    #is_between(1,2,3)
-    #is_between(2,1,3)
-    #is_between(3,1,2)
-    # is_between(1,1,2)
+	#print is_between(1,2,3)
+	#print is_between(2,1,3)
+	#print is_between(3,1,2)
+	#print is_between(1,1,2)
     # # Exercise 6
-    #is_palindrome("Python")
-    #is_palindrome("evitative")
-    #is_palindrome("sememes")
-    # is_palindrome("oooooooooooo")
+	#print is_palindrome("Python")
+	#print is_palindrome("evitative")
+	#print is_palindrome("sememes")
+	#print is_palindrome("oooooooooooo")
     # # Exercise 7
-    #is_power(28,3)
-    #is_power(27,3)
-    #is_power(248832,12)
-    #is_power(248844,12)
+	#print is_power(28,3)
+	#print is_power(27,3)
+	#print is_power(248832,12)
+	#print is_power(248844,12)
 
 
 if __name__ == "__main__":
